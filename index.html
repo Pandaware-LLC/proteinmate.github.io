@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f2f2f7">
   <meta name="description" content="Track your protein and calorie intake with ProteinMate.">
-  <link rel="icon" type="image/png" sizes="1024x1024" href="assets/proteinmate-icon.png">
+  <link rel="icon" type="image/png" sizes="1024x1024" href="assets/proteinmate-icon-light.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" sizes="1024x1024" href="assets/proteinmate-icon-dark.png" media="(prefers-color-scheme: dark)">
   <link rel="stylesheet" href="assets/site.css">
   <title>ProteinMate — track the food that matters</title>
 </head>
@@ -13,7 +14,10 @@
   <header class="site-header">
     <div class="site-shell site-header-inner">
       <a class="brand" href="./" aria-label="ProteinMate home">
-        <img class="brand-icon" src="assets/proteinmate-icon.png" alt="">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="assets/proteinmate-icon-dark.png">
+          <img class="brand-icon" src="assets/proteinmate-icon-light.png" alt="">
+        </picture>
         <span>ProteinMate</span>
       </a>
     </div>

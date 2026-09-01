@@ -194,11 +194,43 @@
       ask for support.
     </p>
     <p>
-      ProteinMate contains no advertising, analytics, or tracking SDKs. Apple
-      frameworks and services—including HealthKit, CloudKit/iCloud,
-      WatchConnectivity, WidgetKit, and UserNotifications—may process
-      information as needed for their operating-system functions under
-      Apple’s policies.
+      ProteinMate contains no third-party advertising, analytics, or tracking
+      SDKs, and Pandaware does not operate an analytics server. Apple frameworks
+      and services—including HealthKit, CloudKit/iCloud,
+      WatchConnectivity, WidgetKit, App Intents, UserNotifications, TestFlight,
+      and App Store Connect—may process information as needed for their
+      operating-system and distribution functions under Apple’s policies.
+    </p>
+    <h3>Apple analytics and diagnostics</h3>
+    <p>
+      When you enable Apple’s “Share With App Developers” analytics choice, or
+      participate in TestFlight where Apple applies separate diagnostic
+      sharing rules, Apple may provide Pandaware with aggregated or otherwise
+      non-personally-identifying usage and diagnostic reports relevant to
+      ProteinMate. Depending on availability and Apple’s privacy thresholds,
+      these reports can include App Store discovery and downloads, sessions,
+      retention, app and widget usage, Shortcuts action runs, crashes, and
+      technical performance. Apple also provides operational telemetry for the
+      private CloudKit container, such as request counts, errors, latency,
+      bandwidth, and storage use.
+    </p>
+    <p>
+      ProteinMate does not deliberately add nutrition values, Apple Health
+      samples, goals, template content, entry identifiers, or intake times to
+      analytics events. Pandaware uses Apple-provided reports only to improve
+      ProteinMate, diagnose crashes and performance, and understand adoption of
+      Apple-provided features. We do not use them to identify a person or
+      device, combine them with Health data, sell them, or provide them to an
+      external analytics service.
+    </p>
+    <p>
+      TestFlight beta builds follow Apple’s separate beta rules. Apple
+      automatically shares TestFlight crash logs with Pandaware regardless of
+      the tester’s device analytics setting. For an email-invited tester, Apple
+      may associate session, crash, device, and submitted-feedback information
+      with the TestFlight invitation. Feedback a tester chooses to submit may
+      include comments, screenshots, and device or runtime details. ProteinMate
+      does not add nutrition values or Apple Health records to that feedback.
     </p>
 
     <h2 id="choices">8. Your choices</h2>
@@ -207,6 +239,7 @@
       <li><strong>Automatic goals:</strong> leave automatic protein or calorie goals off if you do not want ProteinMate to read body mass or resting energy for those calculations.</li>
       <li><strong>Reminders and badges:</strong> turn them off in ProteinMate or in iOS Settings.</li>
       <li><strong>iCloud:</strong> use Apple’s iCloud and device settings to manage services associated with your Apple Account.</li>
+      <li><strong>Apple analytics:</strong> manage Apple’s optional analytics sharing in Settings &gt; Privacy &amp; Security &gt; Analytics &amp; Improvements. This setting does not prevent TestFlight’s automatic beta crash-log sharing.</li>
       <li><strong>Reset:</strong> use ProteinMate’s Reset action to clear the app-owned state described in sections 3 and 5; it does not delete Apple Health entries.</li>
       <li><strong>Sharing:</strong> do not invoke a share action, or cancel it, when you do not want to send an item to another app or person.</li>
     </ul>
@@ -234,6 +267,14 @@
       <a href="mailto:contact@pandaware.us">contact@pandaware.us</a> with
       enough detail for us to investigate. Do not include more health
       information than necessary.
+    </p>
+    <p>
+      Apple controls retention of analytics and diagnostic information within
+      App Store Connect, TestFlight, Xcode, and CloudKit Console. Pandaware does
+      not maintain a separate analytics database. If we download an Apple
+      report to investigate a specific problem, we retain it only as long as
+      reasonably needed to complete that investigation and maintain necessary
+      support or security records.
     </p>
 
     <h2 id="rights">10. Privacy requests</h2>

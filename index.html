@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2f2f7">
+  <meta name="description" content="Track your protein and calorie intake with ProteinMate.">
+  <link rel="icon" type="image/png" sizes="1024x1024" href="assets/proteinmate-icon.png">
+  <link rel="stylesheet" href="assets/site.css">
+  <title>ProteinMate — track the food that matters</title>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-shell site-header-inner">
+      <a class="brand" href="./" aria-label="ProteinMate home">
+        <img class="brand-icon" src="assets/proteinmate-icon.png" alt="">
+        <span>ProteinMate</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="site-shell landing" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <h1 id="hero-title">Track the food that matters.</h1>
+        <div class="hero-lede">
+          <p>Track your protein and calorie intake with ProteinMate.</p>
+          <p>Set your daily protein and calorie goals yourself, or let the app calculate them using factors based on your own health data.</p>
+          <p>ProteinMate integrates with Apple Health and Apple Fitness for a seamless experience across iPhone, iPad, and Apple Watch, complete with dedicated Home Screen and Lock Screen widgets.</p>
+          <p>ProteinMate’s template system makes it easy to track foods you consume regularly.</p>
+          <p>Completely free of ads and microtransactions—now and forever.</p>
+        </div>
+        <a class="app-store-link" href="https://apps.apple.com/app/id6803874677">
+          <img src="assets/app-store-icon.jpg" alt="" aria-hidden="true">
+          <span>Download on the App Store</span>
+        </a>
+      </div>
+
+      <fieldset class="shot-picker">
+        <legend class="visually-hidden">ProteinMate app screens</legend>
+        <input class="shot-input" type="radio" name="screen" id="shot-today" checked>
+        <input class="shot-input" type="radio" name="screen" id="shot-history">
+        <input class="shot-input" type="radio" name="screen" id="shot-settings">
+        <input class="shot-input" type="radio" name="screen" id="shot-widget">
+
+        <div class="shot-tabs" aria-label="Choose a screen">
+          <label for="shot-today">Today</label>
+          <label for="shot-history">History</label>
+          <label for="shot-settings">Settings</label>
+          <label for="shot-widget">iOS widget</label>
+        </div>
+
+        <div class="shot-stage">
+          <div class="shot-arrows shot-arrows-today" aria-hidden="true">
+            <label class="shot-arrow shot-arrow-previous" for="shot-widget" aria-label="Show previous screenshot: iOS widget"></label>
+            <label class="shot-arrow shot-arrow-next" for="shot-history" aria-label="Show next screenshot: History"></label>
+          </div>
+          <div class="shot-arrows shot-arrows-history" aria-hidden="true">
+            <label class="shot-arrow shot-arrow-previous" for="shot-today" aria-label="Show previous screenshot: Today"></label>
+            <label class="shot-arrow shot-arrow-next" for="shot-settings" aria-label="Show next screenshot: Settings"></label>
+          </div>
+          <div class="shot-arrows shot-arrows-settings" aria-hidden="true">
+            <label class="shot-arrow shot-arrow-previous" for="shot-history" aria-label="Show previous screenshot: History"></label>
+            <label class="shot-arrow shot-arrow-next" for="shot-widget" aria-label="Show next screenshot: iOS widget"></label>
+          </div>
+          <div class="shot-arrows shot-arrows-widget" aria-hidden="true">
+            <label class="shot-arrow shot-arrow-previous" for="shot-settings" aria-label="Show previous screenshot: Settings"></label>
+            <label class="shot-arrow shot-arrow-next" for="shot-today" aria-label="Show next screenshot: Today"></label>
+          </div>
+
+          <figure class="shot-panel shot-panel-today">
+            <picture>
+              <source media="(prefers-color-scheme: dark)" srcset="assets/proteinmate-dashboard-dark.png">
+              <img src="assets/proteinmate-dashboard-light.png" alt="ProteinMate Today dashboard with calorie and protein progress rings, an add button, and bottom navigation." fetchpriority="high">
+            </picture>
+            <figcaption>Today · daily dashboard</figcaption>
+          </figure>
+
+          <figure class="shot-panel shot-panel-history">
+            <picture>
+              <source media="(prefers-color-scheme: dark)" srcset="assets/proteinmate-history-demo-dark.png">
+              <img src="assets/proteinmate-history-demo-light.png" alt="ProteinMate History screen showing a week with intake entries.">
+            </picture>
+            <figcaption>History</figcaption>
+          </figure>
+
+          <figure class="shot-panel shot-panel-settings">
+            <picture>
+              <source media="(prefers-color-scheme: dark)" srcset="assets/proteinmate-settings-dark.png">
+              <img src="assets/proteinmate-settings-light.png" alt="ProteinMate Settings screen with active protein and calorie goal controls.">
+            </picture>
+            <figcaption>Settings</figcaption>
+          </figure>
+
+          <figure class="shot-panel shot-panel-widget">
+            <picture>
+              <source media="(prefers-color-scheme: dark)" srcset="assets/proteinmate-widget-rings-dark.png">
+              <img src="assets/proteinmate-widget-rings-light.png" alt="ProteinMate iOS Rings widget preview with calorie and protein rings and an add button.">
+            </picture>
+            <figcaption>iOS widget · Rings</figcaption>
+          </figure>
+        </div>
+      </fieldset>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-shell footer-inner">
+      <span>© 2026 Pandaware LLC</span>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="privacypolicy/">Privacy Policy</a>
+        <a href="mailto:contact@pandaware.us">contact@pandaware.us</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

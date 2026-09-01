@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2f2f7">
+  <meta name="description" content="Privacy Policy for ProteinMate by Pandaware LLC.">
+  <link rel="icon" type="image/png" sizes="1024x1024" href="../assets/proteinmate-icon.png">
+  <link rel="stylesheet" href="../assets/site.css">
+  <title>Privacy Policy — ProteinMate</title>
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-shell site-header-inner">
+      <a class="brand" href="../" aria-label="ProteinMate home">
+        <img class="brand-icon" src="../assets/proteinmate-icon.png" alt="">
+        <span>ProteinMate</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="site-shell prose-page">
+    <header class="page-header">
+      <p class="eyebrow">ProteinMate · Privacy</p>
+      <h1>Privacy Policy</h1>
+      <p class="page-intro">
+        ProteinMate is designed to keep your nutrition data in Apple’s health,
+        iCloud, and device systems. This policy describes what the app
+        processes, where it stays, and what happens when you choose to share it.
+      </p>
+      <p class="updated"><strong>Last updated:</strong> September 1, 2026</p>
+    </header>
+
+    <div class="summary-box">
+      <p><strong>The short version</strong></p>
+      <p>
+        ProteinMate has no Pandaware account system, application-backend
+        database, analytics server, or advertising server. During normal use,
+        ProteinMate does not upload your nutrition history, Apple Health data,
+        settings, templates, Watch state, or diagnostics to Pandaware-operated
+        servers. ProteinMate app data stays in Apple Health, Apple’s private
+        iCloud/CloudKit services associated with your Apple Account, or
+        protected storage on your Apple devices. The exceptions are
+        user-initiated sharing or export and support email; recipients and
+        email providers may retain what you send.
+      </p>
+    </div>
+
+    <h2 id="scope">1. Scope and who we are</h2>
+    <p>
+      This Privacy Policy applies to ProteinMate for iPhone and iPad, its
+      Apple Watch companion, and its WidgetKit widgets and complications
+      (together, “ProteinMate” or “the app”). ProteinMate is provided by
+      Pandaware LLC (“Pandaware,” “we,” “us,” or “our”).
+    </p>
+    <p>
+      This policy describes the current app implementation. Apple’s handling
+      of Health, iCloud, WatchConnectivity, notifications, and device backups
+      is governed by Apple’s own terms and privacy policies, separately from
+      this policy.
+    </p>
+    <p>
+      The companion static website has no JavaScript, analytics, advertising,
+      tracking pixels, cookies, or forms added by Pandaware. GitHub Pages may
+      process request data under GitHub’s own terms; this policy does not make
+      claims about the host’s operational logs.
+    </p>
+
+    <h2 id="health">2. Apple Health and nutrition information</h2>
+    <p>
+      With the Apple Health permissions you grant, ProteinMate can read
+      dietary energy consumed and dietary protein to show progress and history,
+      write the calories and protein you confirm, read active energy burned to
+      optionally adjust your calorie allowance and show a read-only Health
+      entry, and read resting energy and body mass when you enable automatic
+      goals. ProteinMate does not request unrelated HealthKit categories.
+    </p>
+    <p>
+      HealthKit is the source of truth for nutrition history, including
+      calories, protein, entries, and intake times. If HealthKit is unavailable
+      or access is not granted, ProteinMate does not create a substitute local
+      nutrition-history database. You can review or change HealthKit access in
+      Apple’s Health app.
+    </p>
+    <p>
+      ProteinMate uses an opaque, app-generated entry-link identifier and
+      Health sync metadata to recognize entries it created, so it can edit or
+      delete them safely. Entries created by other sources are read-only where
+      the app supports them.
+    </p>
+
+    <h2 id="information">3. Settings, templates, and local app data</h2>
+    <p>
+      ProteinMate processes the settings you choose, including goals,
+      automatic-goal choices, burned-calorie and thermic-effect options,
+      calorie unit, palette, tracking-day boundary, reminders, badges, and
+      other presentation preferences. These settings are used to provide the
+      features you enable. Reminders and badges use iOS’s local notification
+      and application-badge mechanisms; ProteinMate does not use remote
+      notifications for this purpose.
+    </p>
+    <p>
+      When you name or decorate an intake, ProteinMate may store the template
+      name, selected emoji, optional emoji background color, an opaque
+      entry-link identifier, and a metadata update time. These are presentation
+      metadata and are not a replacement for nutrient values or intake times in
+      Apple Health.
+    </p>
+    <p>
+      Protected device-local storage contains app preferences, a local copy of
+      presentation metadata, widget and Watch snapshots, and a bounded Watch
+      delivery queue. These local files are requested to be excluded from
+      device backups where the operating system permits. iOS and Apple backup
+      services control final backup behavior.
+    </p>
+
+    <h2 id="sync">4. Apple iCloud and CloudKit storage</h2>
+    <p>
+      On signed Apple-device builds, ProteinMate may use Apple’s private
+      CloudKit database for app-generated entry-link ID, optional template
+      name, optional emoji, optional emoji color, and an updated time. This
+      private metadata does not contain nutrient quantities or intake
+      timestamps. It is associated with your Apple Account through Apple’s
+      private iCloud services and is not a public post or Pandaware database.
+    </p>
+    <p>
+      ProteinMate may mirror this exact bounded set of preferences through
+      Apple’s iCloud Key-Value Store: protein and calorie goals, burned-calorie
+      policy, deficit, thermic effect, calorie unit, palette, day start, and
+      automatic protein and calorie choices. Other preferences and the local
+      app state described above remain on the device. Apple controls the
+      operation and lifecycle of these services under Apple’s policies.
+    </p>
+
+    <h2 id="watch">5. Widgets and Apple Watch</h2>
+    <p>
+      iOS widgets and Watch complications read local aggregate snapshots to
+      show progress. The iOS widget snapshot contains aggregates only. When a
+      Watch is paired, WatchConnectivity can deliver current progress and a
+      bounded recent set of app-created entry details to the Watch, and the
+      Watch can queue an intake change for the iPhone to process through the
+      existing HealthKit write path. This transport state is kept in protected
+      local App Group storage; the queue is not authoritative nutrition
+      history.
+    </p>
+    <p>
+      The Reset action clears app preferences, presentation metadata, mirrored
+      preference keys, widget snapshots, and Watch display snapshots. If a
+      Watch mutation has not yet been acknowledged, Reset may retain that
+      mutation—date, calories, protein, name, emoji, and color—together with
+      delivery IDs until it is safe to acknowledge and remove it. This is a
+      bounded delivery safeguard to prevent duplicate writes, not a separate
+      history store.
+    </p>
+
+    <h2 id="sharing">6. Sharing, links, and diagnostics</h2>
+    <p>
+      ProteinMate does not publish your data automatically. When you invoke a
+      system Share action, you choose the recipient app or person. A Home
+      progress image can include current calorie and protein progress and
+      goals. An intake share link can include calories, protein grams, an
+      optional template name, emoji, and emoji background color. It does not
+      include the entry UUID or date. The link is Base64-encoded JSON, not
+      encryption, so anyone who receives it may be able to inspect it.
+    </p>
+    <p>
+      Opening an intake link only pre-fills ProteinMate’s editor; the recipient
+      must confirm before anything is written to their Apple Health. A
+      recipient’s app, messaging service, email provider, or cloud storage may
+      retain what you send. If you use Handoff, its activity payload contains
+      only the selected destination and a schema version, not nutrition values,
+      goals, dates, identifiers, templates, or drafts.
+    </p>
+    <p>
+      If you request support or send an email to
+      <a href="mailto:contact@pandaware.us">contact@pandaware.us</a>,
+      Pandaware receives the address, message, and attachments or other
+      information you choose to include. Email providers may process and retain
+      that exchange under their own policies. A user-initiated diagnostic
+      export, where offered by a development or support build, may contain
+      local settings, identifiers, build and runtime details, and Watch state;
+      the current report intentionally omits HealthKit-derived values. Review
+      it before choosing a share destination.
+    </p>
+
+    <h2 id="use">7. How information is used and disclosed</h2>
+    <p>
+      The app uses information on your devices and through the Apple services
+      you enable to provide, maintain, and secure the features you request.
+      Pandaware uses support messages to respond to you and handles them as
+      described above. Pandaware does not sell your information, serve ads,
+      use nutrition data for cross-app tracking or data-broker profiling, or
+      share normal app data with another person unless you direct a share or
+      ask for support.
+    </p>
+    <p>
+      ProteinMate contains no advertising, analytics, or tracking SDKs. Apple
+      frameworks and services—including HealthKit, CloudKit/iCloud,
+      WatchConnectivity, WidgetKit, and UserNotifications—may process
+      information as needed for their operating-system functions under
+      Apple’s policies.
+    </p>
+
+    <h2 id="choices">8. Your choices</h2>
+    <ul>
+      <li><strong>Health permissions:</strong> review or change ProteinMate’s access in Apple Health under your profile and Apps.</li>
+      <li><strong>Automatic goals:</strong> leave automatic protein or calorie goals off if you do not want ProteinMate to read body mass or resting energy for those calculations.</li>
+      <li><strong>Reminders and badges:</strong> turn them off in ProteinMate or in iOS Settings.</li>
+      <li><strong>iCloud:</strong> use Apple’s iCloud and device settings to manage services associated with your Apple Account.</li>
+      <li><strong>Reset:</strong> use ProteinMate’s Reset action to clear the app-owned state described in sections 3 and 5; it does not delete Apple Health entries.</li>
+      <li><strong>Sharing:</strong> do not invoke a share action, or cancel it, when you do not want to send an item to another app or person.</li>
+    </ul>
+
+    <h2 id="retention">9. Retention and deletion</h2>
+    <p>
+      Nutrition entries written to Apple Health remain there until you or
+      Apple Health removes them. ProteinMate’s Reset action does not delete
+      Apple Health entries. When you edit or delete an app-created entry, the
+      app attempts to update or remove the corresponding Apple Health samples
+      after Apple confirms the operation.
+    </p>
+    <p>
+      Reset removes app-owned local preferences, presentation metadata,
+      mirrored bounded preference keys, and rendered widget and Watch display
+      snapshots. It may retain an unacknowledged Watch mutation and its
+      delivery IDs as described in section 5. Support email is retained only
+      for as long as reasonably needed to respond, maintain support history,
+      resolve disputes, and meet legal obligations.
+    </p>
+    <p>
+      Apple controls the lifecycle of data in HealthKit, CloudKit, iCloud
+      Key-Value Store, and device backups. If a device or older installation
+      leaves data you believe should be removed, email
+      <a href="mailto:contact@pandaware.us">contact@pandaware.us</a> with
+      enough detail for us to investigate. Do not include more health
+      information than necessary.
+    </p>
+
+    <h2 id="rights">10. Privacy requests</h2>
+    <p>
+      Depending on where you live, you may have rights to ask for access to,
+      correction of, or deletion of personal information Pandaware handles, or
+      to object to certain uses. Email
+      <a href="mailto:contact@pandaware.us">contact@pandaware.us</a> with
+      your request. We may need to verify your identity. HealthKit and iCloud
+      data controlled by Apple must be managed through Apple’s settings and
+      services; Pandaware cannot directly delete your Apple Health records.
+    </p>
+
+    <h2 id="security">11. Security</h2>
+    <p>
+      ProteinMate relies on Apple’s protected HealthKit and iCloud mechanisms,
+      protected local file locations, atomic local updates, and system share
+      controls. No storage or transmission method is guaranteed to be
+      completely secure. Keep your devices, Apple Account, and operating
+      systems protected, and review recipients before sharing.
+    </p>
+
+    <h2 id="children">12. Children’s privacy</h2>
+    <p>
+      ProteinMate is not directed to children under 13, and we do not knowingly
+      ask children to create an account or provide information directly to us.
+      If you believe a child has contacted us or sent personal information,
+      please contact us so we can review the request.
+    </p>
+
+    <h2 id="changes">13. Changes to this policy</h2>
+    <p>
+      We may update this policy when ProteinMate’s features, data flows, or
+      legal obligations change. The “Last updated” date at the top will change
+      with a new version. If a change is material, we will provide additional
+      notice where appropriate.
+    </p>
+
+    <div class="contact-box">
+      <h2 id="contact">14. Contact us</h2>
+      <p>
+        Questions, requests, or concerns about this policy can be sent to
+        <a href="mailto:contact@pandaware.us">contact@pandaware.us</a>.
+        Return to the <a href="../">ProteinMate home page</a>.
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-shell footer-inner">
+      <span>© 2026 Pandaware LLC</span>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="../">Home</a>
+        <a href="mailto:contact@pandaware.us">contact@pandaware.us</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

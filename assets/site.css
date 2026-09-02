@@ -306,7 +306,8 @@ h1 {
 #shot-today:checked ~ .shot-tabs label[for="shot-today"],
 #shot-history:checked ~ .shot-tabs label[for="shot-history"],
 #shot-settings:checked ~ .shot-tabs label[for="shot-settings"],
-#shot-widget:checked ~ .shot-tabs label[for="shot-widget"] {
+#shot-widget:checked ~ .shot-tabs label[for="shot-widget"],
+#shot-watch:checked ~ .shot-tabs label[for="shot-watch"] {
   background: var(--protein);
   color: var(--selection-ink);
 }
@@ -314,7 +315,8 @@ h1 {
 #shot-today:focus-visible ~ .shot-tabs label[for="shot-today"],
 #shot-history:focus-visible ~ .shot-tabs label[for="shot-history"],
 #shot-settings:focus-visible ~ .shot-tabs label[for="shot-settings"],
-#shot-widget:focus-visible ~ .shot-tabs label[for="shot-widget"] {
+#shot-widget:focus-visible ~ .shot-tabs label[for="shot-widget"],
+#shot-watch:focus-visible ~ .shot-tabs label[for="shot-watch"] {
   outline: 3px solid var(--calorie);
   outline-offset: 2px;
 }
@@ -424,6 +426,13 @@ h1 {
   border-radius: 28px;
 }
 
+.shot-panel-watch img {
+  width: 220px;
+  width: min(220px, 50svh);
+  height: auto;
+  border-radius: 42px;
+}
+
 .shot-panel figcaption {
   margin-top: 8px;
   color: var(--muted);
@@ -440,14 +449,16 @@ h1 {
 #shot-today:checked ~ .shot-stage .shot-panel-today,
 #shot-history:checked ~ .shot-stage .shot-panel-history,
 #shot-settings:checked ~ .shot-stage .shot-panel-settings,
-#shot-widget:checked ~ .shot-stage .shot-panel-widget {
+#shot-widget:checked ~ .shot-stage .shot-panel-widget,
+#shot-watch:checked ~ .shot-stage .shot-panel-watch {
   display: grid;
 }
 
 #shot-today:checked ~ .shot-stage .shot-arrows-today,
 #shot-history:checked ~ .shot-stage .shot-arrows-history,
 #shot-settings:checked ~ .shot-stage .shot-arrows-settings,
-#shot-widget:checked ~ .shot-stage .shot-arrows-widget {
+#shot-widget:checked ~ .shot-stage .shot-arrows-widget,
+#shot-watch:checked ~ .shot-stage .shot-arrows-watch {
   display: flex;
 }
 

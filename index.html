@@ -57,12 +57,14 @@
         <input class="shot-input" type="radio" name="screen" id="shot-history">
         <input class="shot-input" type="radio" name="screen" id="shot-settings">
         <input class="shot-input" type="radio" name="screen" id="shot-widget">
+        <input class="shot-input" type="radio" name="screen" id="shot-watch">
 
         <div class="shot-tabs" aria-label="Choose a screen">
           <label for="shot-today">Today</label>
           <label for="shot-history">History</label>
           <label for="shot-settings">Settings</label>
           <label for="shot-widget">iOS widget</label>
+          <label for="shot-watch">Apple Watch</label>
         </div>
 
         <div class="shot-stage">
@@ -80,6 +82,10 @@
           </div>
           <div class="shot-arrows shot-arrows-widget" aria-hidden="true">
             <label class="shot-arrow shot-arrow-previous" for="shot-settings" aria-label="Show previous screenshot: Settings"></label>
+            <label class="shot-arrow shot-arrow-next" for="shot-watch" aria-label="Show next screenshot: Apple Watch"></label>
+          </div>
+          <div class="shot-arrows shot-arrows-watch" aria-hidden="true">
+            <label class="shot-arrow shot-arrow-previous" for="shot-widget" aria-label="Show previous screenshot: iOS widget"></label>
             <label class="shot-arrow shot-arrow-next" for="shot-today" aria-label="Show next screenshot: Today"></label>
           </div>
 
@@ -110,9 +116,17 @@
           <figure class="shot-panel shot-panel-widget">
             <picture>
               <source media="(prefers-color-scheme: dark)" srcset="assets/proteinmate-widget-rings-dark.png">
-              <img src="assets/proteinmate-widget-rings-light.png" alt="ProteinMate iOS Rings widget preview with calorie and protein rings and an add button.">
+              <img src="assets/proteinmate-widget-rings-light.png" alt="ProteinMate iOS Rings and Values widget showing calorie and protein progress rings with current and goal values.">
             </picture>
-            <figcaption>iOS widget · Rings</figcaption>
+            <figcaption>iOS widget · Rings &amp; Values</figcaption>
+          </figure>
+
+          <figure class="shot-panel shot-panel-watch">
+            <picture>
+              <source media="(prefers-color-scheme: dark)" srcset="assets/proteinmate-watch-dark.png">
+              <img src="assets/proteinmate-watch-light.png" alt="ProteinMate Apple Watch Today screen showing calorie and protein rings, current values, and an Add Intake button.">
+            </picture>
+            <figcaption>Apple Watch · Today</figcaption>
           </figure>
         </div>
       </fieldset>

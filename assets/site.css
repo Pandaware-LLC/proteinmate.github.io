@@ -166,6 +166,13 @@ h1 {
   font-weight: 650;
 }
 
+.store-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
 .app-store-link {
   display: inline-flex;
   align-items: center;
@@ -178,11 +185,29 @@ h1 {
   background: #007aff;
   color: #ffffff;
   font-size: 15px;
+  font-family: inherit;
   font-weight: 720;
   line-height: 1.15;
   text-decoration: none;
   box-shadow: 0 7px 18px rgba(0, 122, 255, 0.2);
   transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.app-store-link.play-store-link {
+  border-color: var(--line-strong);
+  background: var(--surface-secondary);
+  color: var(--muted-strong);
+  box-shadow: none;
+  cursor: default;
+  opacity: 1;
+}
+
+.play-store-icon {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 6px;
+  object-fit: cover;
 }
 
 .app-store-link img {
@@ -202,6 +227,14 @@ h1 {
 
 .app-store-link:active {
   transform: translateY(0);
+}
+
+.app-store-link.play-store-link:hover,
+.app-store-link.play-store-link:active {
+  border-color: var(--line-strong);
+  background: var(--surface-secondary);
+  color: var(--muted-strong);
+  transform: none;
 }
 
 .shot-picker {
@@ -650,6 +683,10 @@ h1 {
   .app-store-link {
     width: fit-content;
     margin-inline: auto;
+  }
+
+  .store-links {
+    justify-content: center;
   }
 
   .shot-picker {

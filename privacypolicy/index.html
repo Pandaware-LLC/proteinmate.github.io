@@ -32,7 +32,7 @@
         iCloud, and device systems. This policy describes what the app
         processes, where it stays, and what happens when you choose to share it.
       </p>
-      <p class="updated"><strong>Last updated:</strong> September 1, 2026</p>
+      <p class="updated"><strong>Last updated:</strong> September 5, 2026</p>
     </header>
 
     <div class="summary-box">
@@ -76,8 +76,13 @@
       dietary energy consumed and dietary protein to show progress and history,
       write the calories and protein you confirm, read active energy burned to
       optionally adjust your calorie allowance and show a read-only Health
-      entry, and read resting energy and body mass when you enable automatic
-      goals. ProteinMate does not request unrelated HealthKit categories.
+      entry, and read resting energy and body mass for automatic goals.
+      For automatic calorie goals, it can also read body-fat percentage and
+      date of birth to derive age. These body metrics support a fallback
+      estimate when resting energy is unavailable. Body mass,
+      body-fat percentage, and date of birth are read-only; ProteinMate does
+      not write these values. The initial Apple Health request covers all
+      these types, while automatic calculations use the data when enabled.
     </p>
     <p>
       HealthKit is the source of truth for nutrition history, including
@@ -139,8 +144,12 @@
     <h2 id="watch">5. Widgets and Apple Watch</h2>
     <p>
       iOS widgets and Watch complications read local aggregate snapshots to
-      show progress. The iOS widget snapshot contains aggregates only. When a
-      Watch is paired, WatchConnectivity can deliver current progress and a
+      show progress. A separate protected local cache supplies up to four
+      reusable Recent Entries widget actions, including calories, protein,
+      template name, emoji, and optional background color. These actions do
+      not retain the original intake's identifier or timestamp and are not
+      an authoritative history store. When a Watch is paired,
+      WatchConnectivity can deliver current progress and a
       bounded recent set of app-created entry details to the Watch, and the
       Watch can queue an intake change for the iPhone to process through the
       existing HealthKit write path. This transport state is kept in protected
@@ -148,8 +157,10 @@
       history.
     </p>
     <p>
-      The Reset action clears app preferences, presentation metadata, mirrored
-      preference keys, widget snapshots, and Watch display snapshots. If a
+      The Reset action restores app preferences to defaults, clears
+      presentation metadata and widget and Watch display snapshots, and
+      publishes explicit defaults for synced preferences rather than deleting
+      their iCloud keys. If a
       Watch mutation has not yet been acknowledged, Reset may retain that
       mutation—date, calories, protein, name, emoji, and color—together with
       delivery IDs until it is safe to acknowledge and remove it. This is a
@@ -240,7 +251,7 @@
     <h2 id="choices">8. Your choices</h2>
     <ul>
       <li><strong>Health permissions:</strong> review or change ProteinMate’s access in Apple Health under your profile and Apps.</li>
-      <li><strong>Automatic goals:</strong> leave automatic protein or calorie goals off if you do not want ProteinMate to read body mass or resting energy for those calculations.</li>
+      <li><strong>Automatic goals:</strong> leave automatic protein or calorie goals off if you do not want ProteinMate to use body mass, resting energy, body-fat percentage, or age derived from date of birth for those calculations. Manage the corresponding read permissions in Apple Health.</li>
       <li><strong>Reminders and badges:</strong> turn them off in ProteinMate or in iOS Settings.</li>
       <li><strong>iCloud:</strong> use Apple’s iCloud and device settings to manage services associated with your Apple Account.</li>
       <li><strong>Apple analytics:</strong> manage Apple’s optional analytics sharing in Settings &gt; Privacy &amp; Security &gt; Analytics &amp; Improvements. This setting does not prevent TestFlight’s automatic beta crash-log sharing.</li>
@@ -257,9 +268,9 @@
       after Apple confirms the operation.
     </p>
     <p>
-      Reset removes app-owned local preferences, presentation metadata,
-      mirrored bounded preference keys, and rendered widget and Watch display
-      snapshots. It may retain an unacknowledged Watch mutation and its
+      Reset restores app-owned preferences to defaults, publishes defaults for
+      the bounded set of synced preferences, and removes presentation metadata
+      and rendered widget and Watch display snapshots. It may retain an unacknowledged Watch mutation and its
       delivery IDs as described in section 5. Support email is retained only
       for as long as reasonably needed to respond, maintain support history,
       resolve disputes, and meet legal obligations.

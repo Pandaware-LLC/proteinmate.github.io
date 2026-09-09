@@ -32,7 +32,7 @@
         iCloud, and device systems. This policy describes what the app
         processes, where it stays, and what happens when you choose to share it.
       </p>
-      <p class="updated"><strong>Last updated:</strong> September 5, 2026</p>
+      <p class="updated"><strong>Last updated:</strong> September 9, 2026</p>
     </header>
 
     <div class="summary-box">
@@ -77,11 +77,13 @@
       write the calories and protein you confirm, read active energy burned to
       optionally adjust your calorie allowance and show a read-only Health
       entry, and read resting energy and body mass for automatic goals.
-      For automatic calorie goals, it can also read body-fat percentage and
-      date of birth to derive age. These body metrics support a fallback
-      estimate when resting energy is unavailable. Body mass,
-      body-fat percentage, and date of birth are read-only; ProteinMate does
-      not write these values. The initial Apple Health request covers all
+      For automatic calorie goals, it can also read body-fat percentage,
+      height, biological sex, and date of birth to derive an estimate.
+      These read-only Health characteristics and quantities are used only when
+      the corresponding automatic calculation needs them. These inputs support
+      a fallback estimate when resting energy is unavailable. Body mass,
+      body-fat percentage, height, biological sex, and date of birth are
+      read-only; ProteinMate does not write these values. The initial Apple Health request covers all
       these types, while automatic calculations use the data when enabled.
     </p>
     <p>
@@ -157,11 +159,12 @@
       history.
     </p>
     <p>
-      The Reset action restores app preferences to defaults, clears
-      presentation metadata and widget and Watch display snapshots, and
-      publishes explicit defaults for synced preferences rather than deleting
-      their iCloud keys. If a
-      Watch mutation has not yet been acknowledged, Reset may retain that
+      Reset provides separate choices for settings, presentation metadata, and
+      ProteinMate-owned Health intakes, as described in section 8. Reset Config
+      and Reset All publish explicit defaults for synced preferences rather than
+      deleting their iCloud keys. During reset, widget and Watch progress is
+      marked unavailable until Apple Health data can be reconciled. If a
+      Watch mutation has not yet been acknowledged, reset may retain that
       mutation—date, calories, protein, name, emoji, and color—together with
       delivery IDs until it is safe to acknowledge and remove it. This is a
       bounded delivery safeguard to prevent duplicate writes, not a separate
@@ -251,29 +254,35 @@
     <h2 id="choices">8. Your choices</h2>
     <ul>
       <li><strong>Health permissions:</strong> review or change ProteinMate’s access in Apple Health under your profile and Apps.</li>
-      <li><strong>Automatic goals:</strong> leave automatic protein or calorie goals off if you do not want ProteinMate to use body mass, resting energy, body-fat percentage, or age derived from date of birth for those calculations. Manage the corresponding read permissions in Apple Health.</li>
+      <li><strong>Automatic goals:</strong> leave automatic protein or calorie goals off if you do not want ProteinMate to use body mass, resting energy, body-fat percentage, height, biological sex, or age derived from date of birth for those calculations. Manage the corresponding read permissions in Apple Health.</li>
       <li><strong>Reminders and badges:</strong> turn them off in ProteinMate or in iOS Settings.</li>
       <li><strong>iCloud:</strong> use Apple’s iCloud and device settings to manage services associated with your Apple Account.</li>
       <li><strong>Apple analytics:</strong> manage Apple’s optional analytics sharing in Settings &gt; Privacy &amp; Security &gt; Analytics &amp; Improvements. This setting does not prevent TestFlight’s automatic beta crash-log sharing.</li>
-      <li><strong>Reset:</strong> use ProteinMate’s Reset action to clear the app-owned state described in sections 3 and 5; it does not delete Apple Health entries.</li>
+      <li><strong>Reset:</strong> choose Reset Config to clear settings while keeping Health intakes, or Reset History to remove app-owned names, emojis, and colors while keeping Health intakes. Reset Apple Health Intakes and Reset All delete ProteinMate-owned intake samples after pending Watch changes are reconciled; later Watch changes may add intakes again.</li>
       <li><strong>Sharing:</strong> do not invoke a share action, or cancel it, when you do not want to send an item to another app or person.</li>
     </ul>
 
     <h2 id="retention">9. Retention and deletion</h2>
     <p>
       Nutrition entries written to Apple Health remain there until you or
-      Apple Health removes them. ProteinMate’s Reset action does not delete
-      Apple Health entries. When you edit or delete an app-created entry, the
-      app attempts to update or remove the corresponding Apple Health samples
-      after Apple confirms the operation.
+      Apple Health removes them. Reset Config and Reset History do not delete
+      Apple Health entries. Reset Apple Health Intakes and Reset All delete
+      ProteinMate-owned intake samples after pending Watch changes are
+      reconciled; other apps’ Health records are not deleted. When you edit or
+      delete an app-created entry, the app attempts to update or remove the
+      corresponding Apple Health samples after Apple confirms the operation.
     </p>
     <p>
-      Reset restores app-owned preferences to defaults, publishes defaults for
-      the bounded set of synced preferences, and removes presentation metadata
-      and rendered widget and Watch display snapshots. It may retain an unacknowledged Watch mutation and its
-      delivery IDs as described in section 5. Support email is retained only
-      for as long as reasonably needed to respond, maintain support history,
-      resolve disputes, and meet legal obligations.
+      Reset Config restores app-owned preferences to defaults and publishes
+      defaults for the bounded set of synced preferences. Reset History removes
+      presentation metadata; Reset Apple Health Intakes removes owned Health
+      intake samples; Reset All combines settings, presentation metadata, and
+      owned Health intake deletion. Rendered widget and Watch snapshots are
+      refreshed after Apple Health data is reconciled. Reset may retain an
+      unacknowledged Watch mutation and its delivery IDs as described in
+      section 5. Support email is retained only for as long as reasonably needed
+      to respond, maintain support history, resolve disputes, and meet legal
+      obligations.
     </p>
     <p>
       Apple controls the lifecycle of data in HealthKit, CloudKit, iCloud

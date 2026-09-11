@@ -148,6 +148,30 @@ h1 {
   text-wrap: balance;
 }
 
+.hero-brand {
+  display: inline-flex;
+  align-items: center;
+  max-width: none;
+  gap: clamp(12px, 1.8vw, 20px);
+  margin-bottom: 17px;
+  text-wrap: nowrap;
+}
+
+.hero-brand picture {
+  display: block;
+  flex: 0 0 auto;
+  width: clamp(56px, 7vw, 88px);
+  height: clamp(56px, 7vw, 88px);
+}
+
+.hero-brand-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: clamp(15px, 1.6vw, 22px);
+  box-shadow: 0 6px 20px rgba(28, 28, 30, 0.16);
+}
+
 .hero-lede {
   max-width: 650px;
   margin-bottom: 18px;
@@ -304,19 +328,17 @@ h1 {
 }
 
 #shot-today:checked ~ .shot-tabs label[for="shot-today"],
-#shot-history:checked ~ .shot-tabs label[for="shot-history"],
 #shot-settings:checked ~ .shot-tabs label[for="shot-settings"],
-#shot-widget:checked ~ .shot-tabs label[for="shot-widget"],
-#shot-watch:checked ~ .shot-tabs label[for="shot-watch"] {
+#shot-watch:checked ~ .shot-tabs label[for="shot-watch"],
+#shot-complication:checked ~ .shot-tabs label[for="shot-complication"] {
   background: var(--protein);
   color: var(--selection-ink);
 }
 
 #shot-today:focus-visible ~ .shot-tabs label[for="shot-today"],
-#shot-history:focus-visible ~ .shot-tabs label[for="shot-history"],
 #shot-settings:focus-visible ~ .shot-tabs label[for="shot-settings"],
-#shot-widget:focus-visible ~ .shot-tabs label[for="shot-widget"],
-#shot-watch:focus-visible ~ .shot-tabs label[for="shot-watch"] {
+#shot-watch:focus-visible ~ .shot-tabs label[for="shot-watch"],
+#shot-complication:focus-visible ~ .shot-tabs label[for="shot-complication"] {
   outline: 3px solid var(--calorie);
   outline-offset: 2px;
 }
@@ -413,20 +435,13 @@ h1 {
 }
 
 .shot-panel-today img,
-.shot-panel-history img,
 .shot-panel-settings img {
   max-width: 220px;
   max-width: min(220px, 100%);
 }
 
-.shot-panel-widget img {
-  width: 220px;
-  width: min(220px, 50svh);
-  height: auto;
-  border-radius: 28px;
-}
-
-.shot-panel-watch img {
+.shot-panel-watch img,
+.shot-panel-complication img {
   width: 220px;
   width: min(220px, 50svh);
   height: auto;
@@ -447,18 +462,16 @@ h1 {
 }
 
 #shot-today:checked ~ .shot-stage .shot-panel-today,
-#shot-history:checked ~ .shot-stage .shot-panel-history,
 #shot-settings:checked ~ .shot-stage .shot-panel-settings,
-#shot-widget:checked ~ .shot-stage .shot-panel-widget,
-#shot-watch:checked ~ .shot-stage .shot-panel-watch {
+#shot-watch:checked ~ .shot-stage .shot-panel-watch,
+#shot-complication:checked ~ .shot-stage .shot-panel-complication {
   display: grid;
 }
 
 #shot-today:checked ~ .shot-stage .shot-arrows-today,
-#shot-history:checked ~ .shot-stage .shot-arrows-history,
 #shot-settings:checked ~ .shot-stage .shot-arrows-settings,
-#shot-widget:checked ~ .shot-stage .shot-arrows-widget,
-#shot-watch:checked ~ .shot-stage .shot-arrows-watch {
+#shot-watch:checked ~ .shot-stage .shot-arrows-watch,
+#shot-complication:checked ~ .shot-stage .shot-arrows-complication {
   display: flex;
 }
 
@@ -740,6 +753,16 @@ h1 {
     width: 32px;
     height: 32px;
     border-radius: 9px;
+  }
+
+  .hero-brand {
+    gap: 10px;
+    font-size: clamp(40px, 12.5vw, 54px);
+  }
+
+  .hero-brand picture {
+    width: 48px;
+    height: 48px;
   }
 
   h1 {

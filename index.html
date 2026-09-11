@@ -8,25 +8,19 @@
   <link rel="icon" type="image/png" sizes="1024x1024" href="assets/proteinmate-icon-light.png" media="(prefers-color-scheme: light)">
   <link rel="icon" type="image/png" sizes="1024x1024" href="assets/proteinmate-icon-dark.png" media="(prefers-color-scheme: dark)">
   <link rel="stylesheet" href="assets/site.css">
-  <title>ProteinMate — track the food that matters</title>
+  <title>ProteinMate</title>
 </head>
 <body>
-  <header class="site-header">
-    <div class="site-shell site-header-inner">
-      <a class="brand" href="./" aria-label="ProteinMate home">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="assets/proteinmate-icon-dark.png">
-          <img class="brand-icon" src="assets/proteinmate-icon-light.png" alt="">
-        </picture>
-        <span>ProteinMate</span>
-      </a>
-    </div>
-  </header>
-
   <main>
     <section class="site-shell landing" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <h1 id="hero-title">Track the food that matters.</h1>
+        <h1 id="hero-title" class="hero-brand">
+          <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="assets/proteinmate-icon-dark.png">
+            <img class="hero-brand-icon" src="assets/proteinmate-icon-light.png" alt="">
+          </picture>
+          <span>ProteinMate</span>
+        </h1>
         <div class="hero-lede">
           <p>Track your protein and calorie intake with ProteinMate.</p>
           <p>Set your daily protein and calorie goals yourself, or let the app calculate them using factors based on your own health data.</p>
@@ -54,79 +48,53 @@
       <fieldset class="shot-picker">
         <legend class="visually-hidden">ProteinMate app screens</legend>
         <input class="shot-input" type="radio" name="screen" id="shot-today" checked>
-        <input class="shot-input" type="radio" name="screen" id="shot-history">
         <input class="shot-input" type="radio" name="screen" id="shot-settings">
-        <input class="shot-input" type="radio" name="screen" id="shot-widget">
         <input class="shot-input" type="radio" name="screen" id="shot-watch">
+        <input class="shot-input" type="radio" name="screen" id="shot-complication">
 
         <div class="shot-tabs" aria-label="Choose a screen">
           <label for="shot-today">Today</label>
-          <label for="shot-history">History</label>
           <label for="shot-settings">Settings</label>
-          <label for="shot-widget">iOS widget</label>
           <label for="shot-watch">Apple Watch</label>
+          <label for="shot-complication">Watch complication</label>
         </div>
 
         <div class="shot-stage">
           <div class="shot-arrows shot-arrows-today" aria-hidden="true">
-            <label class="shot-arrow shot-arrow-previous" for="shot-widget" aria-label="Show previous screenshot: iOS widget"></label>
-            <label class="shot-arrow shot-arrow-next" for="shot-history" aria-label="Show next screenshot: History"></label>
-          </div>
-          <div class="shot-arrows shot-arrows-history" aria-hidden="true">
-            <label class="shot-arrow shot-arrow-previous" for="shot-today" aria-label="Show previous screenshot: Today"></label>
+            <label class="shot-arrow shot-arrow-previous" for="shot-complication" aria-label="Show previous screenshot: Watch complication"></label>
             <label class="shot-arrow shot-arrow-next" for="shot-settings" aria-label="Show next screenshot: Settings"></label>
           </div>
           <div class="shot-arrows shot-arrows-settings" aria-hidden="true">
-            <label class="shot-arrow shot-arrow-previous" for="shot-history" aria-label="Show previous screenshot: History"></label>
-            <label class="shot-arrow shot-arrow-next" for="shot-widget" aria-label="Show next screenshot: iOS widget"></label>
-          </div>
-          <div class="shot-arrows shot-arrows-widget" aria-hidden="true">
-            <label class="shot-arrow shot-arrow-previous" for="shot-settings" aria-label="Show previous screenshot: Settings"></label>
+            <label class="shot-arrow shot-arrow-previous" for="shot-today" aria-label="Show previous screenshot: Today"></label>
             <label class="shot-arrow shot-arrow-next" for="shot-watch" aria-label="Show next screenshot: Apple Watch"></label>
           </div>
           <div class="shot-arrows shot-arrows-watch" aria-hidden="true">
-            <label class="shot-arrow shot-arrow-previous" for="shot-widget" aria-label="Show previous screenshot: iOS widget"></label>
+            <label class="shot-arrow shot-arrow-previous" for="shot-settings" aria-label="Show previous screenshot: Settings"></label>
+            <label class="shot-arrow shot-arrow-next" for="shot-complication" aria-label="Show next screenshot: Watch complication"></label>
+          </div>
+          <div class="shot-arrows shot-arrows-complication" aria-hidden="true">
+            <label class="shot-arrow shot-arrow-previous" for="shot-watch" aria-label="Show previous screenshot: Apple Watch"></label>
             <label class="shot-arrow shot-arrow-next" for="shot-today" aria-label="Show next screenshot: Today"></label>
           </div>
 
           <figure class="shot-panel shot-panel-today">
-            <picture>
-              <source media="(prefers-color-scheme: dark)" srcset="assets/proteinmate-dashboard-dark.png">
-              <img src="assets/proteinmate-dashboard-light.png" alt="ProteinMate Today dashboard with calorie and protein progress rings, an add button, and bottom navigation." fetchpriority="high">
-            </picture>
+            <img src="assets/proteinmate-today.jpeg" alt="ProteinMate Today dashboard with calorie and protein progress rings, an add button, and bottom navigation." fetchpriority="high">
             <figcaption>Today · daily dashboard</figcaption>
           </figure>
 
-          <figure class="shot-panel shot-panel-history">
-            <picture>
-              <source media="(prefers-color-scheme: dark)" srcset="assets/proteinmate-history-demo-dark.png">
-              <img src="assets/proteinmate-history-demo-light.png" alt="ProteinMate History screen showing a week with intake entries.">
-            </picture>
-            <figcaption>History</figcaption>
-          </figure>
-
           <figure class="shot-panel shot-panel-settings">
-            <picture>
-              <source media="(prefers-color-scheme: dark)" srcset="assets/proteinmate-settings-dark.png">
-              <img src="assets/proteinmate-settings-light.png" alt="ProteinMate Settings screen with active protein and calorie goal controls.">
-            </picture>
+            <img src="assets/proteinmate-settings.jpeg" alt="ProteinMate Settings screen with active protein and calorie goal controls.">
             <figcaption>Settings</figcaption>
           </figure>
 
-          <figure class="shot-panel shot-panel-widget">
-            <picture>
-              <source media="(prefers-color-scheme: dark)" srcset="assets/proteinmate-widget-rings-dark.png">
-              <img src="assets/proteinmate-widget-rings-light.png" alt="ProteinMate iOS Rings and Values widget showing calorie and protein progress rings with current and goal values.">
-            </picture>
-            <figcaption>iOS widget · Rings &amp; Values</figcaption>
+          <figure class="shot-panel shot-panel-watch">
+            <img src="assets/proteinmate-watch.jpeg" alt="ProteinMate Apple Watch Today screen showing calorie and protein rings and current values.">
+            <figcaption>Apple Watch · Today</figcaption>
           </figure>
 
-          <figure class="shot-panel shot-panel-watch">
-            <picture>
-              <source media="(prefers-color-scheme: dark)" srcset="assets/proteinmate-watch-dark.png">
-              <img src="assets/proteinmate-watch-light.png" alt="ProteinMate Apple Watch Today screen showing calorie and protein rings, current values, and an Add Intake button.">
-            </picture>
-            <figcaption>Apple Watch · Today</figcaption>
+          <figure class="shot-panel shot-panel-complication">
+            <img src="assets/proteinmate-watch-complication.jpeg" alt="ProteinMate Apple Watch complication showing the time, calorie progress, and protein progress.">
+            <figcaption>Apple Watch · complication</figcaption>
           </figure>
         </div>
       </fieldset>
